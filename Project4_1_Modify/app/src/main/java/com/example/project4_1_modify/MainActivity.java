@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAdd, btnSub, btnMul, btnDiv, btnTemp;
     TextView textResult;
     String num1, num2;
-    Integer result;
+    Double result;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     textResult.setText("계산결과: none" );
                 }
                 else {
-                    result = Integer.parseInt(num1) + Integer.parseInt(num2);
+                    result = Double.parseDouble(num1) + Double.parseDouble(num2);
                     textResult.setText("계산결과: " + result.toString());
                 }
             }
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     textResult.setText("계산결과: none" );
                 }
                 else {
-                    result = Integer.parseInt(num1) - Integer.parseInt(num2);
+                    result = Double.parseDouble(num1) - Double.parseDouble(num2);
                     textResult.setText("계산결과: " + result.toString());
                 }
             }
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     textResult.setText("계산결과: none" );
                 }
                 else {
-                    result = Integer.parseInt(num1) * Integer.parseInt(num2);
+                    result = Double.parseDouble(num1) * Double.parseDouble(num2);
                     textResult.setText("계산결과: " + result.toString());
                 }
             }
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     textResult.setText("계산결과: none" );
                 }
                 else {
-                    result = Integer.parseInt(num1) / Integer.parseInt(num2);
+                    result = Double.parseDouble(num1) / Double.parseDouble(num2);
                     textResult.setText("계산결과: " + result.toString());
                 }
             }
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                     textResult.setText("계산결과: none" );
                 }
                 else {
-                    result = Integer.parseInt(num1) % Integer.parseInt(num2);
+                    result = Double.parseDouble(num1) % Double.parseDouble(num2);
                     textResult.setText("계산결과: " + result.toString());
                 }
             }
