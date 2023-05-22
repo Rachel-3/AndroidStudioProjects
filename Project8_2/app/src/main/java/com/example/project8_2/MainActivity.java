@@ -14,9 +14,9 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnPrev, btnNext;
-    myPictureView mypicture;
-    int curNum=1;
+    Button btnPrev,btnNext;
+    myPictureView myPicture;
+    int curNum;
     File[] imageFiles;
     String imageFname;
 
@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
         btnPrev = (Button) findViewById(R.id.btnPrev);
         btnNext = (Button) findViewById(R.id.btnNext);
 
-        mypicture = (myPictureView) findViewById(R.id.myPictureView1);
+        myPicture = (myPictureView) findViewById(R.id.myPictureView1);
 
         imageFiles = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/Pictures").listFiles();
         imageFname = imageFiles[curNum].toString();
-        mypicture.imagePath = imageFname;
+        myPicture.imagePath = imageFname;
 
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     curNum --;
                     imageFname = imageFiles[curNum].toString();
-                    mypicture.imagePath=imageFname;
-                    mypicture.invalidate();
+                    myPicture.imagePath=imageFname;
+                    myPicture.invalidate();
                 }
             }
         });
